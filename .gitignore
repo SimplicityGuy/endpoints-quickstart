@@ -1,0 +1,5 @@
+.idea/
+app/__pycache__
+app/api.yaml
+app/app_template.yaml_deploy.yaml
+.pyc
