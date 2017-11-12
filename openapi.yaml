@@ -24,6 +24,7 @@ schemes:
 paths:
   "/airportName":
     get:
+      x-swagger-router-controller: "endpoints"
       description: "Get the airport name for a given IATA code."
       operationId: "airportName"
       parameters:

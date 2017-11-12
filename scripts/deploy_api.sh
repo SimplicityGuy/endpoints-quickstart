@@ -29,6 +29,7 @@ main() {
   # Because the included API is a template, we have to do some string
   # substitution before we can deploy it. Sed does this nicely.
   < "$API_FILE" sed -E "s/YOUR-PROJECT-ID/${project_id}/g" > "$TEMP_FILE"
+  cp "$TEMP_FILE" ../app/api.yaml
   echo "Deploying $API_FILE..."
   echo "gcloud endpoints services deploy $API_FILE"
   gcloud endpoints services deploy "$TEMP_FILE"
